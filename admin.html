@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Shop Admin – Update Fish Rates</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=Figtree:wght@400;500;600;700&family=Noto+Sans+Tamil:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+<div class="ks adm-page">
+  <main class="wrap adm">
+    <p><a href="index.html">← Back to shop</a></p>
+    <div id="adm"></div>
+  </main>
+</div>
+<script src="js/config.js"></script>
+<script src="js/admin.js"></script>
+<script>
+  const C = window.SHOP_CONFIG;
+  AdminPanel.mount(document.getElementById('adm'), { config: C, api: AdminPanel.realApi((C.rates && C.rates.endpoint) || '/api/prices', (C.rates && C.rates.imageEndpoint) || '/api/img') });
+</script>
+</body>
+</html>
